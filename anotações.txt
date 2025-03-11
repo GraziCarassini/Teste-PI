@@ -1,0 +1,18 @@
+Como Organizar o Fluxo de Requisições:
+Listagem de Guichês:
+
+O Controller chama listar() que usa o método buscar() da classe Guiche para pegar todos os guichês e os exibe na View.
+Criar Guichê:
+
+O Controller chama criar(). O Controller recebe os dados do formulário, cria uma instância de Guiche, preenche as propriedades e chama o método insert() da classe Guiche para gravar no banco.
+Editar Guichê:
+
+O Controller chama editar(). Ele carrega os dados de um guichê específico através do método buscar_por_id() e, quando o formulário de edição é submetido, chama o método editar() da classe Guiche.
+Ativar/Inativar Guichê:
+
+O Controller chama ativar_inativar(), que chama o método alternar_ativo() da classe Guiche para alternar o status entre ATIVO e INATIVO.
+Excluir Guichê:
+
+O Controller chama excluir(), que chama o método excluir() da classe Guiche para remover o guichê do banco.
+Conclusão:
+A separação de responsabilidades no padrão MVC é importante para manter o código organizado e de fácil manutenção. O Controller gerencia o fluxo da aplicação, enquanto o Model (Guiche.php) lida com a lógica de dados. O Controller chama os métodos do Model quando necessário, e o Model permanece responsável por interagir com o banco de dados.
