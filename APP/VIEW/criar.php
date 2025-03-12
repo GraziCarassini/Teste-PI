@@ -1,5 +1,5 @@
 <?php
-require_once './APP/CLASSE/Guiche.php';
+require_once './APP/CLASSE/guiche.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $num_guiche = $_POST['num_guiche'];
